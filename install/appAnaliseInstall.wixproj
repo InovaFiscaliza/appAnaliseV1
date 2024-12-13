@@ -1,0 +1,5 @@
+<Project Sdk="WixToolset.Sdk/5.0.1">
+  <PropertyGroup>
+    <OutputPath>C:\Users\Fabio\Documents\GitHub\appAnalise\install\SandBoxShare\</OutputPath>
+  </PropertyGroup>
+</Project>

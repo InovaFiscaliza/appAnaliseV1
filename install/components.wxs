@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+
+    <Binary Id="componentTestBin" SourceFile="componentTest.ps1" />
+    <Binary Id="matlabRuntime" SourceFile="OpenVPN-2.6.12-I001-amd64.msi" />
+    <Binary Id="fiscaliza" SourceFile="DownloadConfig.ps1" />
+ 
+    <!-- Run PowerShell Scripts -->
+    <CustomAction Id="componentTest"
+                  BinaryKey="componentTestBin"
+                  Execute="deferred"
+                  Impersonate="no"
+                  ExeCommand="powershell.exe -ExecutionPolicy Bypass -File [BinaryPath]componentTest.ps1 -ResultFilePath '[INSTALLDIR]componentTestResult.txt'" />
+
+  </Fragment>
+</Wix>

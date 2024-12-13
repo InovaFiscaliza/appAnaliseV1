@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product
+        Id="appAnalise"
+        Name="Instalador appAnalise"
+        Language="1046"
+        Version="0.0.1"
+        Manufacturer="ANATEL - Agência Nacional de Telecomunicações"
+        UpgradeCode="0a0093a7-28f8-430b-9ae9-a07f50a3a997">
+
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" />
+
+    <MajorUpgrade DowngradeErrorMessage="Uma versão mais nova já está instalada. Nada será feito. Para downgrade, desinstale a versão atualmente instalada e tente novamente."
+                    AllowSameVersionUpgrades="yes" />
+    <!-- Allow sane version will check only the 3 first verion levels -->
+
+    <Media Id="1" Cabinet="product.cab" EmbedCab="yes" />
+ 
+    <Feature Id="ProductFeature" Title="appAnalise" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+  </Product>
+</Wix>
